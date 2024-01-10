@@ -5,3 +5,25 @@ import styles from './gameHistory.module.css';
 // It should take in props for the sentence, correctChars, incorrectChars, wpm, and time
 // Export your GameHistory component!
 
+const CardComponent = ({sentence, correctCharacters, incorrectCharacters, wpm, time}) => {
+    return (
+        <div>
+            <p className={styles.cardContent}>
+                <b>Correct: </b> {sentence}
+            </p>
+            <p className={styles.cardContent}>
+                <b>Correct Characters: </b> {correctCharacters}
+            </p>    
+            <p className = {styles.cardContent}>
+                <b>Incorrect Characters: </b> {incorrectCharacters}
+            </p>
+            <p className = {styles.cardContent}>
+                <b>WPM: </b> {wpm}
+            </p>
+            <p className = {styles.cardContent}>
+                <b>TIme Taken: </b> {time}
+            </p>
+
+        </div>
+    )
+}
